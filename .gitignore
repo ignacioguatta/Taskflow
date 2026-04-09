@@ -1,0 +1,12 @@
+# Carpetas de compilación
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
