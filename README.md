@@ -1,5 +1,3 @@
-Y para actualizar el README, abrí el archivo README.md desde Visual Studio o con el Bloc de notas, reemplazá todo el contenido con el texto mejorado que te pasé antes, guardá, y luego en la terminal:
-
 # TaskFlow 🗂️
 
 ## Descripción
