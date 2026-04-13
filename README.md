@@ -64,3 +64,4 @@ usuarios organizar, visualizar y administrar sus actividades desde la línea de 
 | Guatta Ignacio      |
 | Sarain Rodrigo      |
 | Tabaré Nadia        |
+| Bautista Cebrero    |
