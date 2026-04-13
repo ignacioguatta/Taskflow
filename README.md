@@ -24,7 +24,7 @@ usuarios organizar, visualizar y administrar sus actividades desde la línea de 
 ```bash
    git clone https://github.com/TU_USUARIO/taskflow.git
 ```
-2. Abrir el archivo `First.sln` con Visual Studio
+2. Abrir el archivo `Taskflow` con Visual Studio
 3. Presionar `F5` o el botón **Ejecutar** para compilar y correr el proyecto
 
 **Opción B — Terminal / CMD**
@@ -34,7 +34,7 @@ usuarios organizar, visualizar y administrar sus actividades desde la línea de 
 ```
 2. Navegar a la carpeta del proyecto:
 ```bash
-   cd taskflow/First
+   cd Taskflow/src/Taskflow
 ```
 3. Compilar y ejecutar:
 ```bash
