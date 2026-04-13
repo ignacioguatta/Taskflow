@@ -6,5 +6,9 @@ namespace TaskFlow.Services
 {
     internal class TaskService
     {
+        public void CrearTarea(string title, string description, string responsible)
+        {
+            
+        }
     }
 }
