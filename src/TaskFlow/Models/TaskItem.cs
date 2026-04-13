@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TaskFlow.Models
 {
-    internal class TaskItem
+    public class TaskItem
     {
         public string Id { get; set; }
         public string Title { get; set; }
