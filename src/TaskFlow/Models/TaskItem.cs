@@ -4,13 +4,19 @@ using System.Text;
 
 namespace TaskFlow.Models
 {
+    public enum TaskStatus 
+    {
+        Pendiente,
+        EnProgreso,
+        Completada
+    }
     public class TaskItem
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Responsible { get; set; }
-        public enum Status { NotStarted, InProgress, Completed }
+        public TaskStatus Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }
