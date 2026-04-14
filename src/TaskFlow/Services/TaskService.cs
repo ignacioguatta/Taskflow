@@ -75,5 +75,25 @@ namespace TaskFlow.Services
 
             Console.WriteLine($"\nGracias por usar TaskFlow. Se crearon {_tasks.Count} tarea/s. ¡Hasta luego!");
         }
+
+        public List<TaskItem> GetAllTasks()
+        {
+            return _tasks;
+        }
+
+        public bool UpdateStatus(int id, TaskStatus nuevoEstado)
+        {
+            foreach (var tarea in _tasks)
+            {
+                if (tarea.Id == id)
+                {
+                    tarea.Status = nuevoEstado;
+                    tarea.UpdatedAt = DateTime.Now;
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
