@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TaskFlow.Models
 {
-    public enum TaskStatus  // ✅ Enum definido FUERA de la clase, mismo namespace
+    public enum TaskStatus 
     {
         Pendiente,
         EnProgreso,
@@ -16,7 +16,7 @@ namespace TaskFlow.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string Responsible { get; set; }
-        public TaskStatus Status { get; set; } // ✅ Propiedad que usa el enum
+        public TaskStatus Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }

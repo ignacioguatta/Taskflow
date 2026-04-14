@@ -54,12 +54,12 @@ namespace TaskFlow.Services
                 }
                 catch (ArgumentException ex)
                 {
-                    Console.WriteLine($"⚠️ Dato inválido: {ex.Message}");
+                    Console.WriteLine($"Dato inválido: {ex.Message}");
                     _nextId--;
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"❌ Error inesperado: {ex.Message}");
+                    Console.WriteLine($"Error inesperado: {ex.Message}");
                 }
 
                 Console.WriteLine("\n¿Desea crear otra tarea? (s/n):");
