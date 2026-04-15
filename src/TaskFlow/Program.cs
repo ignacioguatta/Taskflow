@@ -12,7 +12,7 @@ namespace TaskFlow
             TaskService taskService = new TaskService();
             taskService.CrearTarea();
 
-            Console.WriteLine("\n-- Tareas actuales --"):
+            Console.WriteLine("\n-- Tareas actuales --");
             foreach (var t in taskService.GetAllTasks())
             {
                 Console.WriteLine($"ID: {t.Id} | Titulo: {t.Title} | Estado: {t.Status}");
@@ -30,7 +30,6 @@ namespace TaskFlow
             foreach (var t in taskService.GetAllTasks())
             {
                 Console.WriteLine($"ID: {t.Id} | Titulo: {t.Title} | Estado: {t.Status} | Modificado: {t.UpdatedAt}");
-                
             }
         }
     }
