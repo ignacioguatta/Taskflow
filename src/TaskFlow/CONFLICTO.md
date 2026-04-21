@@ -30,3 +30,13 @@
 
   Se eliminaron los marcadores de conflicto, se guardó el archivo y se hizo el commit de
   resolución.
+  
+  ¿Cómo evitar conflictos?
+
+  1. Actualizar la rama frecuentemente — hacer git pull de main antes de empezar a trabajar cada
+   día
+  2. Ramas de vida corta — no dejar una rama abierta por muchos días sin mergear
+  3. Comunicación con el equipo — avisar qué archivos estás modificando para no pisar el trabajo
+   de otro
+  4. Dividir responsabilidades por archivo — cada integrante trabaja en archivos distintos
+  cuando sea posible
