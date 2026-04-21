@@ -11,23 +11,10 @@ namespace TaskFlow
         {
             TaskService taskService = new TaskService();
 
-            // Crear tareas
+            // Versión B: primero creamos y luego listamos todas
             taskService.CrearTarea();
-
-            // Listar todas las tareas
             taskService.ListarTareas();
-
-            // Cambiar estado de la tarea 1
-            Console.WriteLine("\n-- Cambiando estado de la tarea 1 a EnProgreso --");
-            bool resultado = taskService.UpdateStatus(1, TaskStatus.EnProgreso);
-
-            if (resultado)
-                Console.WriteLine("Estado actualizado correctamente.");
-            else
-                Console.WriteLine("No se encontró la tarea.");
-
-            // Listar solo las tareas en progreso
-            taskService.ListarTareasPorEstado(TaskStatus.EnProgreso);
+            taskService.UpdateStatus(1, TaskStatus.EnProgreso);
         }
     }
 }
