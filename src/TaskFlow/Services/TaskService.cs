@@ -95,5 +95,57 @@ namespace TaskFlow.Services
 
             return false;
         }
+        public void ListarTareas()
+        {
+            if (_tasks.Count == 0)
+            {
+                Console.WriteLine("\nNo hay tareas registradas.");
+                return;
+            }
+
+            Console.WriteLine("\n========== LISTA DE TAREAS ==========");
+            foreach (var tarea in _tasks)
+            {
+                Console.WriteLine($"\nID:           {tarea.Id}");
+                Console.WriteLine($"Título:       {tarea.Title}");
+                Console.WriteLine($"Descripción:  {tarea.Description}");
+                Console.WriteLine($"Responsable:  {tarea.Responsible}");
+                Console.WriteLine($"Estado:       {tarea.Status}");
+                Console.WriteLine($"Creada:       {tarea.CreatedAt}");
+                Console.WriteLine($"Actualizada:  {tarea.UpdatedAt}");
+                Console.WriteLine("-------------------------------------");
+            }
+            Console.WriteLine($"Total: {_tasks.Count} tarea/s.");
+        }
+
+        public void ListarTareasPorEstado(TaskStatus estado)
+        {
+            var tareasFiltradas = new List<TaskItem>();
+
+            foreach (var tarea in _tasks)
+            {
+                if (tarea.Status == estado)
+                    tareasFiltradas.Add(tarea);
+            }
+
+            if (tareasFiltradas.Count == 0)
+            {
+                Console.WriteLine($"\nNo hay tareas con estado '{estado}'.");
+                return;
+            }
+
+            Console.WriteLine($"\n===== TAREAS CON ESTADO: {estado} =====");
+            foreach (var tarea in tareasFiltradas)
+            {
+                Console.WriteLine($"\nID:           {tarea.Id}");
+                Console.WriteLine($"Título:       {tarea.Title}");
+                Console.WriteLine($"Descripción:  {tarea.Description}");
+                Console.WriteLine($"Responsable:  {tarea.Responsible}");
+                Console.WriteLine($"Actualizada:  {tarea.UpdatedAt}");
+                Console.WriteLine("-------------------------------------");
+            }
+            Console.WriteLine($"Total: {tareasFiltradas.Count} tarea/s con estado
+'{estado}'.");
+          }
     }
 }
