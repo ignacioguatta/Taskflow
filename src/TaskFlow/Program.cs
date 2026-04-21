@@ -11,9 +11,11 @@ namespace TaskFlow
         {
             TaskService taskService = new TaskService();
 
-            // Versión A: primero creamos y luego listamos por estado
+            // Resolución: combinamos ambas versiones
             taskService.CrearTarea();
+            taskService.ListarTareas();
             taskService.ListarTareasPorEstado(TaskStatus.Pendiente);
+            taskService.UpdateStatus(1, TaskStatus.EnProgreso);
         }
     }
 }
