@@ -83,16 +83,32 @@ namespace TaskFlow.Services
 
         public bool UpdateStatus(int id, TaskStatus nuevoEstado)
         {
+    
+            if (id <= 0)
+            {
+                Console.WriteLine("⚠ El ID ingresado no es válido.");
+                return false;
+            }
+
             foreach (var tarea in _tasks)
             {
                 if (tarea.Id == id)
                 {
-                    tarea.Status = nuevoEstado;
+            
+                    if (tarea.Status == nuevoEstado)
+                    {
+                        Console.WriteLine($"⚠ La tarea ya tiene el estado: {nuevoEstado}");
+                        return false;
+                    }
+
+                    tarea.Status    = nuevoEstado;
                     tarea.UpdatedAt = DateTime.Now;
+                    Console.WriteLine($"✓ Estado actualizado correctamente a: {nuevoEstado}");
                     return true;
                 }
             }
 
+            Console.WriteLine($"✗ No se encontró ninguna tarea con ID {id}.");
             return false;
         }
         public void ListarTareas()
@@ -144,8 +160,7 @@ namespace TaskFlow.Services
                 Console.WriteLine($"Actualizada:  {tarea.UpdatedAt}");
                 Console.WriteLine("-------------------------------------");
             }
-            Console.WriteLine($"Total: {tareasFiltradas.Count} tarea/s con estado
-'{estado}'.");
+            Console.WriteLine($"Total: {tareasFiltradas.Count} tarea/s con estado'{estado}'.");
           }
     }
 }
